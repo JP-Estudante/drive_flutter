@@ -1,0 +1,35 @@
+buildscript {
+    repositories {
+        // Certifique-se de incluir o repositório do Google
+        google()
+        mavenCentral() // Adicionado para suportar dependências do Maven Central, se necessário
+    }
+    dependencies {
+        // Dependência necessária para serviços do Google (Firebase e outros)
+        classpath 'com.google.gms:google-services:4.3.2'
+    }
+}
+
+allprojects {
+    repositories {
+        // Repositórios globais para todas as dependências
+        google()
+        mavenCentral()
+    }
+}
+
+// Definições de diretórios de build
+rootProject.buildDir = "../build"
+subprojects {
+    project.buildDir = "${rootProject.buildDir}/${project.name}"
+}
+
+// Define dependência de avaliação do módulo app
+subprojects {
+    project.evaluationDependsOn(":app")
+}
+
+// Task para limpar diretórios de build
+tasks.register("clean", Delete) {
+    delete rootProject.buildDir
+}

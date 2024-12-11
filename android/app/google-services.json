@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "479953758631",
+    "project_id": "driveflutter-798d9",
+    "storage_bucket": "driveflutter-798d9.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:479953758631:android:e33070e0806d5f319aae82",
+        "android_client_info": {
+          "package_name": "com.example.drive_flutter"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCfy-hj7nju5jfKUa3UM1MBMopWry7hnzg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

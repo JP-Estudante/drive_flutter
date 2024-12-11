@@ -1,0 +1,51 @@
+plugins {
+    id "com.android.application"
+    id "kotlin-android"
+    // O plugin do Flutter deve ser aplicado após os plugins do Android e Kotlin.
+    id "dev.flutter.flutter-gradle-plugin"
+}
+
+android {
+    namespace = "com.example.drive_flutter"
+    compileSdk = flutter.compileSdkVersion
+    ndkVersion = flutter.ndkVersion
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8
+    }
+
+    defaultConfig {
+        applicationId = "com.example.drive_flutter"
+        minSdk = flutter.minSdkVersion
+        targetSdk = flutter.targetSdkVersion
+        versionCode = flutter.versionCode
+        versionName = flutter.versionName
+    }
+
+    buildTypes {
+        release {
+            signingConfig = signingConfigs.debug
+        }
+    }
+}
+
+flutter {
+    source = "../.."
+}
+
+// Dependências adicionais para Firebase e outros serviços
+dependencies {
+    // Adicione o Firebase SDK para Google Analytics
+    implementation 'com.google.firebase:firebase-analytics:17.2.0'
+
+    // Adicione outros SDKs do Firebase conforme necessário
+    // Exemplo: implementation 'com.google.firebase:firebase-auth:21.3.0'
+}
+
+// Aplique o plugin Google Services no final
+apply plugin: 'com.google.gms.google-services'
