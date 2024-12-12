@@ -12,7 +12,12 @@
           "package_name": "com.example.drive_flutter"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "479953758631-4hq95tm1on7j0sapisp8c4tvpsstf1et.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyCfy-hj7nju5jfKUa3UM1MBMopWry7hnzg"
@@ -20,7 +25,12 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "479953758631-4hq95tm1on7j0sapisp8c4tvpsstf1et.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }
